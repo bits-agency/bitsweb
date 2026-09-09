@@ -1,0 +1,51 @@
+export type Service = {
+  slug: string;
+  number: string;
+  category: string;
+  title: string;
+  short: string;
+  description: string;
+  features: string[];
+  benefits: string[];
+};
+
+export const serviceGroups = [
+  { label: "Build", title: "Digital Development", serviceSlugs: ["web-development", "software-development", "mobile-app-development", "saas-product-development"] },
+  { label: "Design", title: "Creative & Experience", serviceSlugs: ["graphics-design", "branding", "ui-ux-design"] },
+  { label: "Grow", title: "Visibility & Growth", serviceSlugs: ["seo-online-visibility"] },
+  { label: "Transform", title: "Intelligence & Automation", serviceSlugs: ["ai-solutions", "business-automation"] },
+  { label: "Support", title: "Technology Infrastructure", serviceSlugs: ["hosting-infrastructure", "it-support-consulting", "training-digital-skills"] },
+] as const;
+
+export const services: Service[] = [
+  { slug: "web-development", number: "01", category: "Build", title: "Web Development", short: "Digital presences built to grow.", description: "Your business deserves more than a website. It deserves a digital presence built to earn trust, reach customers, and keep improving.", features: ["Business and corporate websites", "E-commerce and booking platforms", "Web portals, directories and PWAs", "Redesign, maintenance and optimization"], benefits: ["Clearer customer journeys", "Faster, accessible experiences", "A flexible foundation for growth"] },
+  { slug: "software-development", number: "02", category: "Build", title: "Software & Application Development", short: "Systems that make operations simpler.", description: "We turn complex business requirements into dependable software, internal tools, portals, and connected systems your team can actually use.", features: ["Custom business software", "CRM, POS and inventory systems", "Admin dashboards and customer portals", "APIs, integrations and databases"], benefits: ["Less repetitive work", "Better visibility across operations", "Software shaped around your process"] },
+  { slug: "mobile-app-development", number: "03", category: "Build", title: "Mobile App Development", short: "Useful products in your customers' hands.", description: "From first flow to store deployment, we design and build mobile applications around real customer needs and reliable performance.", features: ["Android and iOS applications", "Cross-platform products", "Booking, delivery and utility apps", "App maintenance and deployment"], benefits: ["A focused mobile experience", "Consistent product foundations", "A clearer path from idea to launch"] },
+  { slug: "graphics-design", number: "04", category: "Design", title: "Graphics Design", short: "Visual communication with purpose.", description: "We create the graphics your business needs to communicate clearly across campaigns, print, presentations, and digital channels.", features: ["Flyers, posters and banners", "Business cards and letterheads", "Social media and product graphics", "Infographics, certificates and pitch decks"], benefits: ["A more consistent visual voice", "Faster campaign production", "Design that supports the message"] },
+  { slug: "branding", number: "05", category: "Design", title: "Branding & Brand Identity", short: "A credible identity people remember.", description: "We bring strategy, visual identity, and practical brand systems together so your business can show up with confidence.", features: ["Brand strategy and positioning", "Visual identity and colour systems", "Typography and brand guidelines", "Corporate, product and social identity"], benefits: ["Stronger market credibility", "Consistency across touchpoints", "A brand system your team can use"] },
+  { slug: "ui-ux-design", number: "06", category: "Design", title: "UI/UX Design", short: "Experiences that feel obvious to use.", description: "We research, map, prototype, and design digital products around the people who need to use them.", features: ["UX research and user flows", "Wireframes and prototypes", "Responsive product UI", "Design systems and developer handoff"], benefits: ["Less friction for users", "Better product decisions early", "A smoother build process"] },
+  { slug: "seo-online-visibility", number: "07", category: "Grow", title: "SEO & Online Visibility", short: "Help the right people find you.", description: "We improve the technical and content foundations that help businesses become easier to discover and understand online.", features: ["Technical and on-page SEO", "Keyword research and content optimization", "Local SEO and Google Business Profile", "Indexing and search monitoring"], benefits: ["Stronger discoverability", "A healthier search foundation", "Clearer visibility opportunities"] },
+  { slug: "ai-solutions", number: "08", category: "Transform", title: "AI Solutions", short: "Practical intelligence for real work.", description: "We help businesses use AI where it creates meaningful leverage: support, search, content, assistants, and connected workflows.", features: ["AI chatbots and assistants", "AI-powered applications", "AI search and content systems", "AI API and workflow integrations"], benefits: ["Faster access to information", "More capable customer support", "New ways to scale expertise"] },
+  { slug: "business-automation", number: "09", category: "Transform", title: "Business Automation & Digital Transformation", short: "Replace friction with flow.", description: "We map the work behind the work, then create digital systems that reduce manual steps and make progress visible.", features: ["Workflow and process automation", "Digital forms and notifications", "CRM and operational dashboards", "Process digitization and optimization"], benefits: ["Fewer manual handoffs", "More reliable operations", "A better view of what needs attention"] },
+  { slug: "hosting-infrastructure", number: "10", category: "Support", title: "Hosting, Domains & Infrastructure", short: "A reliable home for your digital work.", description: "We help businesses put the right infrastructure around their website, software, data, and communication tools.", features: ["Domains, hosting and business email", "SSL, cloud deployment and server setup", "Database hosting and cloud storage", "Backups, migrations and monitoring"], benefits: ["Fewer infrastructure surprises", "Safer, more stable deployments", "Support for the next stage"] },
+  { slug: "it-support-consulting", number: "11", category: "Support", title: "IT Support & Consulting", short: "A technical partner when you need one.", description: "When technology gets in the way, we bring calm, practical support and a clearer strategy for what comes next.", features: ["IT consultation and technical support", "System setup and troubleshooting", "Cloud consultation and technology strategy", "Website and software support"], benefits: ["Quicker resolution", "More confident decisions", "A dependable point of contact"] },
+  { slug: "training-digital-skills", number: "12", category: "Support", title: "Training & Digital Skills", short: "Build capability, not dependency.", description: "We help individuals and teams build practical skills across software, design, AI, digital marketing, and technology foundations.", features: ["Web development and programming", "Graphics, UI/UX and AI tools", "Digital marketing and WordPress", "Corporate training, workshops and bootcamps"], benefits: ["More confident teams", "Practical, relevant learning", "Skills that continue creating value"] },
+  { slug: "saas-product-development", number: "13", category: "Build", title: "SaaS & Product Development", short: "Turn a promising idea into a product.", description: "We help founders and organizations shape, design, and build software products with a clear path from first release to future scale.", features: ["SaaS and subscription platforms", "Business software and AI products", "Product strategy and MVP definition", "Product design and continued development"], benefits: ["A sharper first release", "Better alignment between product and market", "A product foundation ready to evolve"] },
+];
+
+export const industries = ["Small & Medium Businesses", "Startups", "Education", "Real Estate", "Hospitality", "Retail", "Professional Services", "NGOs & Organizations", "Health & Wellness", "Events & Entertainment", "Technology Companies", "Entrepreneurs & Personal Brands"];
+
+export const projects = [
+  { title: "Project Alpha", type: "Demo Project", category: "Business Website", description: "A modern digital presence designed to help a growing business showcase its services and reach more customers.", image: "alpha", year: "Editable" },
+  { title: "Project Delta", type: "Concept Project", category: "Mobile Application", description: "A mobile-first digital product designed around customer convenience and a focused service journey.", image: "delta", year: "Editable" },
+  { title: "Project Beta", type: "Demo Project", category: "Business Management Platform", description: "A custom digital system concept designed to streamline business operations and make progress easier to see.", image: "beta", year: "Editable" },
+  { title: "Project Gamma", type: "Concept Project", category: "Brand Identity", description: "A complete visual identity concept created for a modern business ready to communicate with more confidence.", image: "gamma", year: "Editable" },
+];
+
+export const insights = [
+  { slug: "technology-should-serve-the-business", category: "Business Growth", title: "Technology Should Serve the Business", excerpt: "A useful digital system starts with the work, people, and outcomes that matter — not a list of fashionable tools." },
+  { slug: "when-a-business-needs-more-than-a-website", category: "Web Development", title: "When a Business Needs More Than a Website", excerpt: "A website can be a front door, a sales tool, a support layer, or the start of a larger digital system." },
+  { slug: "a-practical-starting-point-for-ai", category: "AI", title: "A Practical Starting Point for AI", excerpt: "The best first AI use case is often the one that makes a repeated task easier to understand and improve." },
+];
+
+export const processSteps = ["Discover", "Strategize", "Design", "Build", "Test", "Launch", "Grow"];

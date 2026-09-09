@@ -1,0 +1,6 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { CtaBand, NumberedList, PageIntro } from "@/components/page-primitives";
+import { industries } from "@/lib/site-data";
+
+export const Route = createFileRoute("/industries")({ head: () => ({ meta: [{ title: "Industries — BITS.go" }, { name: "description", content: "BITS.go supports businesses, startups, organizations, and professionals across industries." }, { property: "og:title", content: "Industries — BITS.go" }, { property: "og:description", content: "Technology and digital solutions shaped around the work each industry needs to do." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }], links: [{ rel: "canonical", href: "/industries" }] }), component: IndustriesPage });
+function IndustriesPage() { return <div><PageIntro eyebrow="Who we serve" title="Different work. Same need to move forward." copy="BITS.go works with people and organizations at different stages, from first digital presence to connected systems and long-term support." /><section className="py-20 sm:py-28"><div className="mx-auto max-w-7xl px-5 sm:px-8"><NumberedList items={industries} /></div></section><CtaBand title="Your industry has its own context. Let's understand yours." /></div>; }

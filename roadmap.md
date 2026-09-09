@@ -1,0 +1,4 @@
+- [ ] Build BITS.go shared brand shell and tokenized visual system
+- [ ] Build conversion-focused homepage in selected asymmetric split-grid direction
+- [ ] Add services, solutions, industries, work, about, founder, insights, contact, quote, careers, privacy, and terms pages
+- [ ] Verify metadata, responsive rendering, interactions, and preview health
