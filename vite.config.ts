@@ -12,7 +12,15 @@ export default defineConfig(({ command }) => ({
     tanstackStart({
       server: { entry: "server" },
     }),
-    command === "build" ? nitro({ preset: "node-server" }) : null,
+    command === "build"
+      ? nitro({
+          preset: process.env.VERCEL
+            ? "vercel"
+            : process.env.CF_PAGES
+            ? "cloudflare-pages"
+            : "node-server",
+        })
+      : null,
     viteReact(),
   ].filter(Boolean),
 }));
